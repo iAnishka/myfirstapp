@@ -1,4 +1,8 @@
 Myfirstapp::Application.routes.draw do
+  # get "pages/home"   #I commented it to remove it
+  get "about" => 'pages#about'
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
