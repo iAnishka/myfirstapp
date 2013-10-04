@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if user_signed_in? %>
+<%= render "layouts/menu_logged_in" %>
+<% else %>
 <%= render "layouts/menu" %>
+<% end %>
 <div class="container">
+	<% flash.each do |name, msg| %>
+		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	<% end %>
 	<%= yield %>
 	<%= render "layouts/footer" %>
 </div>

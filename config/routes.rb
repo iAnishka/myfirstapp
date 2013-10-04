@@ -1,4 +1,6 @@
 Myfirstapp::Application.routes.draw do
+  devise_for :users
+
   # get "pages/home"   #I commented it to remove it
   get "about" => 'pages#about'
   root :to => 'pages#home'

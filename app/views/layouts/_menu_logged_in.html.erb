@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Login", new_user_session_path, class: "btn btn-info dropdown-toggle pull-right" %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete,class: "btn btn-info dropdown-toggle pull-right" %>
  
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -24,6 +24,9 @@
       	<li>
       		<%= link_to "About", about_path %>
       	</li>
+        <li>
+          <%= link_to "Profile", edit_user_registration_path %>
+        </li>
       </ul>
       </div>
     </div>
