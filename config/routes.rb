@@ -1,4 +1,7 @@
 Myfirstapp::Application.routes.draw do
+  resources :pins
+
+
   devise_for :users
 
   # get "pages/home"   #I commented it to remove it
